@@ -6,7 +6,9 @@
 </head>
 <body>
 	<h1>El Juego ha Empezado</h1>
+	<%= session['letradivinada'] %>
 	<p id="parrafo"><%= session['letra'] %></p>
+	<p>Numero de intentos fallidos = <%= session['intentos'] %></p>
 	<%= session['resultado'] %>
 	<form action="/validarLetra" method="POST">
 		<input type="text" id="area-ingreso-letra" name="area-ingreso-letra">

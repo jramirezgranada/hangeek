@@ -4,6 +4,9 @@ enable :sessions
 set :session_secret, 'thisIsAKleerSecret'
 
 get '/' do
+	session.clear
+	hangeek = Hangeek.new
+	session['hangeek'] = hangeek
     erb :index
 end
 
@@ -22,7 +25,9 @@ end
 
 post '/validarLetra' do
 	session['letra'] = params["area-ingreso-letra"]
-	hangeek = Hangeek.new
-	session['resultado'] = hangeek.existeLetra session['letra']
+	intentos = session['hangeek'].intentos ||= 0
+	session['resultado'] = session['hangeek'].existeLetra session['letra'], intentos
+	session['intentos'] = session['hangeek'].intentos
+	session['letradivinada'] = session['hangeek'].palabraAdivinada
 	erb :juego
 end
