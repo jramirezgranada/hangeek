@@ -26,10 +26,18 @@ Then(/^debo empezar el juego$/) do
   click_button("empezar")
 end
 
-When(/^Que puedo ver el "(.*?)" para ingresar la letra "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+
+When(/^puedo ingresar la letra "(.*?)" en el "(.*?)"$/) do |arg1, arg2|
+	fill_in(arg2, :with => arg1)
 end
 
-Then(/^debo poder ver la letra "(.*?)" sobre el area\-ingreso\-letra$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+
+Then(/^puedo ver la letra "(.*?)" en el "(.*?)" sobre el area\-ingreso\-letra$/) do |letter, paragraph|
+	last_response.should have_xpath( "//p[@id=\"#{paragraph}\"]") do |p|
+    	p.should contain( letter )
+	end
+end
+
+When(/^envio la letra$/) do
+	 click_button("enviar")
 end

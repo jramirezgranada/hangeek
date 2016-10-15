@@ -15,3 +15,7 @@ end
 post '/juego' do
 	erb :juego
 end
+
+post '/validarLetra' do
+	erb :juego
+end

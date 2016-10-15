@@ -3,6 +3,7 @@ class Hangeek
 
 	def initialize palabra="ADIVINA"
 		@palabra = palabra
+		@intentos = 0;
 	end
 
 	def ingresarPalabra
@@ -11,7 +12,13 @@ class Hangeek
 
 	def existeLetra letra="A"
 		counter = @palabra.scan(/(?=#{letra})/).count
-		letra * counter
+		
+		if counter > 0
+			"La letra #{letra} existe"
+		else
+			@intentos += 1
+		end
+		
 	end
 
 end

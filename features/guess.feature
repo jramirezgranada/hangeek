@@ -6,5 +6,8 @@ Feature:
 Scenario: Debe haber un area para ingresar la letra
 	Given dado a que abri la pagina
 	And que inicio el juego 
-	When Que puedo ver el "area-ingreso-letra" para ingresar la letra "A"
-	Then debo poder ver la letra "A" sobre el area-ingreso-letra
+	And debo poder ingresar la palabra "adivina" en el campo "palabra"
+	And debo empezar el juego
+	When puedo ingresar la letra "A" en el "area-ingreso-letra"
+	And envio la letra 
+	Then puedo ver la letra "A" en el "parrafo" sobre el area-ingreso-letra
