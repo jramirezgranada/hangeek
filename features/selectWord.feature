@@ -16,5 +16,5 @@ Scenario: Quiero poder empezar el juego
 Scenario: Quiero ver el titulo del juego centrado
 	Given dado a que abri la pagina
 	When que inicio el juego
-	And debo ver "Ingrese una Palabra"
-	Then debo ver el "titulo" "Ingrese una Palabra" centrado
+	And debo ver "Ingrese una palabra para adivinar"
+	Then debo ver el "titulo" "Ingrese una palabra para adivinar" centrado
