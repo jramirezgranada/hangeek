@@ -25,3 +25,11 @@ end
 Then(/^debo empezar el juego$/) do
   click_button("empezar")
 end
+
+When(/^Que puedo ver el "(.*?)" para ingresar la letra "(.*?)"$/) do |arg1, arg2|
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^debo poder ver la letra "(.*?)" sobre el area\-ingreso\-letra$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
