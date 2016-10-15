@@ -14,6 +14,11 @@ Then(/^debo poder ingresar la palabra "(.*?)" en el campo "(.*?)"$/) do |palabra
   fill_in(campo, :with => palabra)
 end
 
+Then(/^debo empezar el juego$/) do
+  click_button("empezar")
+end
+
+
 
 
 #Given(/^que inicio el juego$/) do

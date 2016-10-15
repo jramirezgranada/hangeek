@@ -11,3 +11,7 @@ end
 get '/ingresar-palabra' do
 	"Ingrese la palabra para adivinar"
 end
+
+post '/juego' do
+	erb :juego
+end
