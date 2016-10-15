@@ -17,6 +17,7 @@ class Hangeek
 			"La letra #{letra} existe"
 		else
 			@intentos += 1
+			"La letra #{letra} no existe"
 		end
 		
 	end

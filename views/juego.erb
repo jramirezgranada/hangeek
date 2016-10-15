@@ -6,7 +6,8 @@
 </head>
 <body>
 	<h1>El Juego ha Empezado</h1>
-	<p id="parrafo">A</p>
+	<p id="parrafo"><%= session['letra'] %></p>
+	<%= session['resultado'] %>
 	<form action="/validarLetra" method="POST">
 		<input type="text" id="area-ingreso-letra" name="area-ingreso-letra">
 		<input type="submit" name="enviar" value="enviar">
