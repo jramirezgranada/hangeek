@@ -15,4 +15,4 @@ Scenario: Quiero ver el titulo del juego centrado
 Scenario: Quiero iniciar una partida y ver el espacio para ingresar una palabra
 	Given dado a que abri la pagina
 	When que inicio el juego
-	Then debo ver "Ingrese una Palabra"
+	Then debo ver "Ingrese una palabra para adivinar"
