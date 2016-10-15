@@ -12,3 +12,9 @@ Scenario: Quiero poder empezar el juego
 	When debo poder ingresar la palabra "adivina" en el campo "palabra"
 	Then debo empezar el juego
 	And debo ver "El Juego ha Empezado"
+
+Scenario: Quiero ver el titulo del juego centrado
+	Given dado a que abri la pagina
+	When que inicio el juego
+	And debo ver "Ingrese una Palabra"
+	Then debo ver el "titulo" "Ingrese una Palabra" centrado
